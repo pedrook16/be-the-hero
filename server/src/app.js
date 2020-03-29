@@ -13,20 +13,16 @@ class App {
 
     this.middlewares();
     this.routes();
-    this.cors();
     this.exceptionHandler();
   }
 
   middlewares() {
     this.server.use(express.json());
+    this.server.use(cors());
   }
 
   routes() {
     this.server.use(routes);
-  }
-
-  cors() {
-    this.server.use(cors());
   }
 
   exceptionHandler() {

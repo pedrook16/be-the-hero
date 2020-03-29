@@ -13,6 +13,7 @@ routes.post('/ongs', OngsController.store);
 
 routes.get('/incidents', IncidentsController.index);
 routes.post('/incidents', IncidentsController.store);
+routes.delete('/incidents/:id', IncidentsController.delete);
 
 routes.get('/profile', ProfileController.index);
 
